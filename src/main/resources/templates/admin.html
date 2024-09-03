@@ -103,62 +103,6 @@
 																th:data-bs-target="${'#modalEdit'+ user.getId()}">Edit
 														</button>
 
-<!--														<div class="modal fade" th:id="${'modalEdit'+ user.getId()}" tabindex="-1" aria-labelledby="exampleModalLabel"-->
-<!--															 aria-hidden="true">-->
-<!--															<div class="modal-dialog">-->
-<!--																<div class="modal-content">-->
-<!--																	<form th:method="POST" th:action="@{'/adminPanel/update?id=' + ${user.getId()}}" th:object="${user}">-->
-<!--																		<div class="modal-header">-->
-<!--																			<h1 class="modal-title fs-5" id="exampleModalLabel">Edit user</h1>-->
-<!--																			<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--																		</div>-->
-<!--																		<div class="modal-body">-->
-<!--																			<div class="form-group text-center">-->
-<!--																				<label for="id"><b>ID</b>:</label>-->
-<!--																				<input type="text" class="form-control" name="editId" th:value="${user.id}" disabled/>-->
-<!--																			</div>-->
-<!--																			<div class="form-group text-center">-->
-<!--																				<label for="editFirstName"><b>First Name</b>:</label>-->
-<!--																				<input type="text" class="form-control" name="editFirstName"-->
-<!--																					   th:value="${user.firstName}" placeholder="First Name"/>-->
-<!--																			</div>-->
-<!--																			<div class="form-group text-center">-->
-<!--																				<label for="editLastName"><b>Last Name</b>:</label>-->
-<!--																				<input type="text" class="form-control" name="editLastName" th:value="${user.lastName}"-->
-<!--																					   placeholder="Last Name"/>-->
-<!--																			</div>-->
-<!--																			<div class="form-group text-center">-->
-<!--																				<label for="editAge"><b>Age</b>:</label>-->
-<!--																				<input type="text" class="form-control" name="editAge" th:value="${user.age}"-->
-<!--																					   placeholder="Age"/>-->
-<!--																			</div>-->
-<!--																			<div class="form-group text-center">-->
-<!--																				<label for="editEmail"><b>Email</b>:</label>-->
-<!--																				<input type="text" class="form-control" name="editEmail" th:value="${user.email}"-->
-<!--																					   placeholder="Email"/>-->
-<!--																			</div>-->
-<!--																			<div class="form-group text-center">-->
-<!--																				<label for="editPassword"><b>Password</b>:</label>-->
-<!--																				<input type="text" class="form-control" name="editPassword" placeholder="Password"/>-->
-<!--																			</div>-->
-<!--																			<div class="form-group">-->
-<!--																				<label for="editRoles"><b>Role</b>:</label>-->
-<!--																				<select th:name="roles" class="form-control" id="editRoles" size="2" multiple required>-->
-<!--																					th:field="*{roles}">-->
-<!--																					<option th:each="role : ${allRoles}"-->
-<!--																							th:text="${role.getName()}" th:value="${role.getId()}"></option>-->
-<!--																				</select>-->
-<!--																			</div>-->
-
-<!--																		</div>-->
-<!--																		<div class="modal-footer">-->
-<!--																			<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
-<!--																			<button type="button" class="btn btn-primary">Edit</button>-->
-<!--																		</div>-->
-<!--																</div>-->
-<!--															</div>-->
-<!--														</div>-->
-
 														<div class="modal fade" th:id="'modalEdit' + ${user.id}"
 															 tabindex="-1"
 															 role="dialog" aria-labelledby="exampleModalLabel"
@@ -168,7 +112,6 @@
 																	<div class="modal-header">
 																		<h1 class="modal-title fs-5" id="exampleModalLabel">Edit user</h1>
 																		<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
 																	</div>
 																	<div class="modal-body">
 																		<form th:method="POST"
@@ -242,9 +185,7 @@
 																						class="btn btn-primary">Edit
 																				</button>
 																			</div>
-
 																		</form>
-
 																	</div>
 																</div>
 															</div>
@@ -265,7 +206,6 @@
                                                                     <div class="modal-header">
                                                                         <h1 class="modal-title fs-5" id="deleteModalLabel">Edit user</h1>
                                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-
                                                                     </div>
                                                                     <div class="modal-body">
                                                                         <form th:method="POST"
@@ -317,17 +257,7 @@
                                                                                        class="form-control" id="role"
                                                                                        th:name="allRoles"
                                                                                        placeholder="Role" disabled>
-
                                                                             </div>
-
-<!--                                                                            <div class="form-group">-->
-<!--                                                                                <label for="editRoles"><b>Role</b>:</label>-->
-<!--                                                                                <select th:name="roles" class="form-control" id="editRoles" size="2" multiple disabled>-->
-<!--                                                                                    th:field="*{roles}">-->
-<!--                                                                                    <option th:each="role : ${allRoles}" th:text="${role.getName()}"></option>-->
-<!--&lt;!&ndash;                                                                                            th:text="${role.getName()}" th:value="${role.getId()}"></option>&ndash;&gt;-->
-<!--                                                                                </select>-->
-<!--                                                                            </div>-->
 
                                                                             <div class="modal-footer">
                                                                                 <button type="button"
@@ -338,14 +268,11 @@
                                                                                         class="btn btn-danger btn">Delete
                                                                                 </button>
                                                                             </div>
-
                                                                         </form>
-
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-
 													</td>
 												</tr>
 												</tbody>
@@ -447,7 +374,6 @@
 											<td th:text="${user2.get().age}">year</td>
 											<td th:text="${user2.get().email}">Email</td>
 											<td th:text="${user2.get().rolesAsString}">Email</td>
-
 										</tr>
 										</tbody>
 									</table>
@@ -462,11 +388,6 @@
 </div>
 
 
-
-
-
-
-
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
 		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
 		crossorigin="anonymous"></script>
@@ -476,5 +397,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
 		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
 		crossorigin="anonymous"></script>
-
 </html>
